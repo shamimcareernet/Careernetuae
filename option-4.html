@@ -44,7 +44,7 @@
            ========================================================================== */
         h1, h2, h3, h4, h5 { font-weight: 700; }
         h1 { font-size: 40px; line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.5px; }
-        h2 { font-size: 32px; line-height: 1.2; color: var(--dark-blue); margin-bottom: 20px; letter-spacing: -0.5px; text-align: center; }
+        h2 { font-size: 32px; line-height: 1.2; color: var(--dark-blue);  letter-spacing: -0.5px; text-align: center; }
         h3 { font-size: 24px; line-height: 1.3; color: var(--dark-blue); margin-bottom: 15px; }
         h4 { font-size: 20px; line-height: 1.4; color: var(--dark-blue); margin-bottom: 10px; }
         h5 { font-size: 18px; line-height: 1.4; color: var(--dark-blue); }
@@ -175,6 +175,113 @@
         }
 
         /* ==========================================================================
+           8. Brand Solutions Section (Modern UI/UX Update)
+           ========================================================================== */
+        .brand-grid-2 { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px; 
+        }
+        .brand-grid-3 { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 12px; 
+        }
+        @media (max-width: 991px) {
+            .brand-grid-2, .brand-grid-3 { grid-template-columns: 1fr; gap: 15px; }
+        }
+
+        .brand-card-modern {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 12px;
+            padding: 28px 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            position: relative;
+        }
+        .brand-card-modern:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,140,182,0.1);
+            border-color: rgba(0,140,182,0.2);
+        }
+        .brand-card-modern.featured-main {
+            border-top: 4px solid var(--primary-blue);
+        }
+        .brand-card-modern.featured-special {
+            background: linear-gradient(160deg, #ffffff 0%, #fdfaf0 100%);
+            border: 1px solid rgba(252, 184, 19, 0.3);
+            border-top: 4px solid var(--action-yellow);
+        }
+        
+        .brand-logo-modern {
+            height: 34px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .brand-logo-modern img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        .brand-subtitle-modern {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            line-height: 1.3;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+        
+        .modern-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex-grow: 1;
+        }
+        .modern-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .modern-list-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(0, 140, 182, 0.08);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+        .featured-special .modern-list-icon {
+            background: rgba(252, 184, 19, 0.15);
+            color: #b58000;
+        }
+        .modern-list-content {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.3;
+        }
+        .modern-list-content strong {
+            display: block;
+            font-size: 18px;
+            color: var(--pure-black);
+            margin-bottom: 4px;
+        }
+
+        /* ==========================================================================
            9. UI Components: Cards, Icons, Overlays
            ========================================================================== */
         .card { background: var(--white); border-radius: 16px; padding: 35px 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); transition: var(--transition); border: 1px solid rgba(0,0,0,0.04); width: 100%; height: 100%; display: flex; flex-direction: column; position: relative; overflow: hidden; z-index: 1; text-align: left; text-decoration: none; color: inherit; cursor: pointer;}
@@ -182,7 +289,7 @@
         
         .card-alt { background: var(--light-grey); border: none; box-shadow: none; }
         .card-alt:hover { background: var(--white); box-shadow: 0 20px 40px rgba(0, 140, 182, 0.12); border-color: rgba(0, 140, 182, 0.3); }
-        
+
         #solutions .card { text-align: center; align-items: center; }
         #solutions .custom-icon { justify-content: center; }
 
@@ -192,14 +299,13 @@
         .read-more-text { display: inline-flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 700; color: var(--primary-blue); transition: var(--transition); }
         .card:hover .read-more-text { color: var(--action-yellow); }
 
-        .expertise-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 25px; display: flex; align-items: center; gap: 20px; transition: var(--transition); text-align: left; position: relative; overflow: hidden; }
+        .expertise-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; display: flex; align-items: center; gap: 20px; transition: var(--transition); text-align: left; position: relative; overflow: hidden; }
         .expertise-card .icon-box { width: 50px; height: 50px; flex-shrink: 0; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--white); }
         .expertise-card h4 { font-size: 15px; margin-bottom: 0; line-height: 1.4; color: var(--white); }
 
-        /* Mobile specific padding overrides for expertise cards */
         @media (max-width: 767px) {
             .expertise-card { padding: 15px !important; }
-            #expertise .grid-4 { margin-top: 20px !important; }
+            #expertise .grid-3 { margin-top: 20px !important; }
         }
 
         .glass-card { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 10px; padding: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: left; height: 100%; transition: var(--transition); overflow: hidden; display: flex; flex-direction: column; }
@@ -257,9 +363,9 @@
         .modal-close:hover { color: var(--white); background: var(--primary-blue); }
 
         .cs-section { margin-bottom: 20px; }
-        .cs-section h4 { color: var(--primary-blue); margin-bottom: 10px; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+        .cs-section h4 { color: #184770; margin-bottom: 10px; font-size: 18px;  }
         .cs-section ul { padding-left: 20px; margin-bottom: 15px; }
-        .cs-section ul li { margin-bottom: 8px; font-size: 15px; color: #444; }
+        .cs-section ul li { margin-bottom: 8px; font-size: 15px; color: #000000; }
 
         /* ==========================================================================
            12. Floating Elements (WhatsApp, Chatbot & Cookie)
@@ -304,7 +410,7 @@
             bottom: 90px;
             right: 20px;
             width: 350px;
-            height: 500px;
+            height: 400px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: 20px;
@@ -312,7 +418,7 @@
             border: 1px solid rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
-            z-index: 9999;
+            z-index: 99999;
             opacity: 0;
             visibility: hidden;
             transform: translateY(20px);
@@ -473,7 +579,7 @@
             <div class="grid grid-2" style="height: 100%; width: 100%;">
                 <div data-aos="fade-in" class="hero-content">
                     <h1 style="color: var(--white); text-align: left;">Making holistic talent solutions happen in the Middle East</h1>
-                    <p style="font-size: 20px; opacity: 0.9; margin-bottom: 0; max-width: 500px; font-weight: 400; text-align: left; color: var(--white);">Helping organizations optimize the sourcing, assessing, and hiring of early-career to CXO talent worldwide for 25+ years.</p>
+                    <p style="font-size: 20px; opacity: 0.9; margin-bottom: 0; max-width: 500px; font-weight: 400; text-align: left; color: var(--white);">Helping organizations optimize the sourcing, assessing, and hiring of early-career to CXO talent worldwide for 25+ years</p>
                     
                     <div class="hero-buttons">
                         <a href="#modal-hire" class="btn btn-secondary popup-trigger" style="width: auto;">Hire Great Talent</a>
@@ -494,11 +600,19 @@
                     <img src="https://testing.careernet.ae/wp-content/uploads/2026/03/Making-employability.webp" alt="About Careernet" class="img-fluid" style="border-radius: 20px;">
                 </div>
                 <div data-aos="fade-in" data-aos-delay="200" class="text-left">
-                    <h2 class="mb-30 gradient-text text-left" style="text-align: left;">25+ years of making great teams and dream careers happen</h2>
+                    <h2 class="mb-30 gradient-text text-left" style="text-align: left;">We make great teams and dream careers happen
+                    </h2>
                     <div style="font-size: 18px;">
                         <p>Since 1999, Careernet has been the leading talent solutions provider for Fortune 500 enterprises and high-growth technology companies across global markets.</p>
-                        <p>What we bring: Expertise spanning industries, functions, and experience levels — from Technology and Engineering to Infrastructure, Oil and Gas, and Retail. Full-lifecycle talent solutions including Permanent hiring, Staffing, Leadership search, Emiratization, Talent branding, and Assessment-led hiring.</p>
-                        <p>With a strong global reach combined with a deep understanding of local markets, and a growing Middle East presence with Dubai on-ground and global delivery centers.</p>
+                        
+                        <h4 style="margin-top: 20px; margin-bottom: 15px;">What we bring</h4>
+                        <ul style="padding-left: 20px; margin-bottom: 15px;">
+                            <li style="margin-bottom: 10px;">Expertise spanning industries, functions, and experience levels — from AI, robotics, and emerging tech startups to retail, e-commerce, hospitality, and beyond</li>
+                            <li style="margin-bottom: 10px;">Full-lifecycle recruitment solutions: Permanent hiring, Staffing, Leadership search as an executive search company, Nationalization, Talent branding, Assessment-led hiring</li>
+                            <li style="margin-bottom: 10px;">Strong global reach combined with a deep understanding of local markets</li>
+                            <li style="margin-bottom: 10px;">A growing Middle East presence, with Dubai on-ground and global delivery centers</li>
+                        </ul>
+                        
                         <p>Because the world needs great talent, we make it happen with the unified strength of Careernet, HirePro, Longhouse, and MyCareernet.</p>
                     </div>
                 </div>
@@ -508,12 +622,12 @@
 
     <section class="section section-gradient">
         <div class="container">
-            <h2 class="mb-30" style="color: var(--white);" data-aos="fade-in">What Sets Us Apart</h2>
+            <h2 class="mb-30" style="color: var(--white);" data-aos="fade-in">What sets us apart            </h2>
             
             <div class="grid grid-mobile-2 grid-4 text-center mb-30">
                 <div data-aos="fade-in" data-aos-delay="100">
                     <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="1000">0</span>+</h3>
-                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Enterprise customers<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">(50+ Fortune 500)</span></p>
+                    <p style="font-weight: 700; font-size: 16px; color: var(--white);">Enterprise customers<br><span style="font-size: 13px; opacity: 0.7; font-weight: 400;">(50+ Fortune 500 companies)</span></p>
                 </div>
                 <div data-aos="fade-in" data-aos-delay="200">
                     <h3 style="color: var(--action-yellow); font-size: 44px; margin-bottom: 5px;"><span class="counter" data-target="100">0</span>M+</h3>
@@ -540,56 +654,55 @@
                 </div>
             </div>
             
-            <div class="row justify-content-center text-center mt-5" style="border-top: 1px solid rgba(255,255,255,0.2); ">
-                <div class="col-lg-8" data-aos="fade-in" data-aos-delay="200">
-                    <p class="text-white fs-5 fw-bold mt-4 mb-0 text-center" data-aos="fade-in" data-aos-delay="300">Strong presence across UAE, India, US, and Philippines, enabling hub-led broader regional coverage</p>
+            <div class="row justify-content-center text-center mt-3">
+                <div class="col-lg-10" data-aos="fade-in" data-aos-delay="200">
+                    <p class="text-white fs-5 fw-bold mt-4 mb-0 text-center" data-aos="fade-in" data-aos-delay="300">Strong presence across Middle East, India, US, and Philippines, enabling hub-led broader regional coverage</p>
                 </div>
             </div>
         </div>
     </section>
 
-     <section class="section section-alt">
-            <div class="container">
-                <div class="text-center mb-30" data-aos="fade-in">
-                    <h2 class="gradient-text" style="font-size: clamp(24px, 3vw, 36px);">We make it happen at every phase of the recruitment supply chain</h2>
-                    <p>Integrated recruitment solutions through our specialized group brands</p>
-                </div>
-                
-                <div class="swiper init-swiper" data-aos="fade-in" data-aos-delay="200">
-                    <script type="application/json" class="swiper-config">
-                        { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 4, "spaceBetween": 30 } } }
-                    </script>
-                    <div class="swiper-wrapper py-2">
-                        <div class="swiper-slide">
-                            <a href="#modal-brand-1" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
-                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/CN_Logo_Color_Light_BG.svg" alt="Careernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
-                                <p style="font-size: 15px; margin: 0; flex-grow: 1;">Scaled hiring: college, early-career, experienced.</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#modal-brand-2" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
-                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/LH-Logo-without-by-line.svg" alt="Longhouse" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
-                                <p style="font-size: 15px; margin: 0; flex-grow: 1;">Executive search and leadership advisory.</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#modal-brand-3" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
-                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/HirePro_Full-color.svg" alt="HirePro" style="height: 32px; margin-bottom: 20px; object-fit: contain; object-position: left;">
-                                <p style="font-size: 15px; margin: 0; flex-grow: 1;">AI-powered recruitment automation (proctored assessments and interviews).</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#modal-brand-4" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
-                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/MYCN_Color_Without_Byline.svg" alt="MyCareernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
-                                <p style="font-size: 15px; margin: 0; flex-grow: 1;">Employer branding and talent community engagement.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+    <section class="section section-alt">
+        <div class="container">
+            <div class="text-center mb-30" data-aos="fade-in">
+                <h2 class="gradient-text" style="font-size: clamp(24px, 3vw, 36px);">We make it happen at every phase of the recruitment supply chain</h2>
+                <p>Integrated recruitment solutions through our specialized group brands</p>
             </div>
-        </section>
-    
+            
+            <div class="swiper init-swiper" data-aos="fade-in" data-aos-delay="200">
+                <script type="application/json" class="swiper-config">
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 20, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 4, "spaceBetween": 30 } } }
+                </script>
+                <div class="swiper-wrapper py-2">
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-1" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/CN_Logo_Color_Light_BG.svg" alt="Careernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Scaled hiring: college, early-career, experienced.</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-2" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/LH-Logo-without-by-line.svg" alt="Longhouse" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Executive search and leadership advisory.</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-3" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/HirePro_Full-color.svg" alt="HirePro" style="height: 32px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">AI-powered recruitment automation (proctored assessments and interviews).</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#modal-brand-4" class="card popup-trigger text-decoration-none" style="color: inherit; border-radius: 10px;">
+                            <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/MYCN_Color_Without_Byline.svg" alt="MyCareernet" style="height: 35px; margin-bottom: 20px; object-fit: contain; object-position: left;">
+                            <p style="font-size: 15px; margin: 0; flex-grow: 1;">Employer branding and talent community engagement.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 
     <section id="solutions" class="section section-alt" style="background: var(--white);">
         <div class="container text-center">
@@ -667,47 +780,63 @@
         <div class="blob-bg blob-1"></div>
         <div class="blob-bg blob-2"></div>
         <div class="container" style="position: relative; z-index: 2;">
-            <h2 style="color: var(--white);" data-aos="fade-in">Our Industry Expertise</h2>
-            <p class="mb-30" style="color: var(--action-yellow); font-size: 20px;" data-aos="fade-in" data-aos-delay="100">Specialized talent solutions across diverse sectors</p>
-            
+            <h2 style="color: var(--white);" data-aos="fade-in">Our industry expertise            </h2>
+            <!-- <p class="mb-30" style="color: var(--action-yellow); font-size: 20px;" data-aos="fade-in" data-aos-delay="100">Specialized talent solutions across diverse sectors</p>
+             -->
             <div class="grid grid-4" style="margin-top: 40px;" data-aos="fade-in" data-aos-delay="200">
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-cart3"></i></div>
-                    <h4>Retail and E-commerce</h4>
-                </div>
-                <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-laptop"></i></div>
-                    <h4>Tech, Product, and Digital</h4>
+                    <h4>Technology and Digital</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-cpu"></i></div>
                     <h4>AI, Robotics, Emerging Tech Startups</h4>
                 </div>
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-fuel-pump"></i></div>
-                    <h4>Oil and Gas</h4>
+                    <div class="icon-box"><i class="bi bi-bank"></i></div>
+                    <h4>Banking and Financial Services</h4>
                 </div>
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-headset"></i></div>
-                    <h4>Shared Services</h4>
-                </div>
-                <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-buildings"></i></div>
-                    <h4>Infrastructure</h4>
+                    <div class="icon-box"><i class="bi bi-cart3"></i></div>
+                    <h4>Retail and E-Commerce</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-cup-hot"></i></div>
-                    <h4>Hospitality</h4>
+                    <h4>Hospitality and Tourism</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-buildings"></i></div>
+                    <h4>Real Estate and Construction</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-heart-pulse"></i></div>
                     <h4>Healthcare and Pharma</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-fuel-pump"></i></div>
+                    <h4>Energy and Oil/Gas</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-truck"></i></div>
+                    <h4>Logistics and Ports</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-film"></i></div>
+                    <h4>Entertainment and Media</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-book"></i></div>
+                    <h4>Education</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="marquee-wrap">
+        <div class="text-center mb-30" data-aos="fade-in">
+            <h2 class="gradient-text" style="font-size: 28px;">Trusted by leading organizations globally</h2>
+         
+        </div>
         <div class="marquee" data-aos="fade-in">
             <img src="https://testing.careernet.ae/wp-content/uploads/2026/04/Mercedes-Benz.svg" alt="Mercedes-Benz">
             <img src="https://testing.careernet.ae/wp-content/uploads/2026/04/Ford.svg" alt="Ford">
@@ -723,17 +852,18 @@
         </div>
     </div>
 
-    <section class="section section-alt" style="background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80') center/cover fixed; position: relative;">
+    <section class="section section-alt" >
         <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(247,247,247,0.92); z-index: 0;"></div>
         <div class="container text-center" style="position: relative; z-index: 1;">
-            <h2 class="mb-30 gradient-text" data-aos="fade-in">Awards & Recognitions</h2>
+            <h2 class="gradient-text" data-aos="fade-in">Awards and recognitions
+            </h2>
             
             <div class="grid grid-3" style="gap: 30px; margin-top: 40px; align-items: stretch;">
                 <div class="glass-card" data-aos="fade-in" data-aos-delay="100">
                     <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/GPTW_2026-2027_Logo_SVG.webp" alt="Great Place To Work" style="object-fit: contain; background: rgba(255,255,255,0.8); padding: 20px;">
                     <div class="glass-card-content">
                         <h4 style="color: #06325E; font-size: 18px;">Great Place to Work®</h4>
-                        <p style="font-size: 15px; margin: 0; color: #333;">Certified Organization</p>
+                        <p style="font-size: 15px; margin: 0; color: #333;">Certified organization</p>
                     </div>
                 </div>
                 <div class="glass-card" data-aos="fade-in" data-aos-delay="200">
@@ -746,7 +876,7 @@
                 <div class="glass-card" data-aos="fade-in" data-aos-delay="300">
                     <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/ISO27001_2013_GDPR_Certified_Company.webp" alt="ISO Compliant" style="object-fit: contain; background: rgba(255,255,255,0.8); padding: 20px;">
                     <div class="glass-card-content">
-                        <h4 style="color: #06325E; font-size: 18px;">ISO 27001 & GDPR Compliant</h4>
+                        <h4 style="color: #06325E; font-size: 18px;">ISO 27001 certified and GDPR compliant</h4>
                         <p style="font-size: 15px; margin: 0; color: #333;">Industry-leading security standards</p>
                     </div>
                 </div>
@@ -775,7 +905,7 @@
                             <a href="#cs-me-1" data-modal="cs-me-1" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Tech-Scaling.webp" alt="Newgen Tech Teams" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">Tech Scaling</span>
+                                    
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A leading digital solutions provider built tech teams in Saudi Arabia for their India delivery center (Newgen)</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -785,7 +915,7 @@
                             <a href="#cs-me-2" data-modal="cs-me-2" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/AI-and-robotics.webp" alt="AI Startup GCC" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--action-yellow); color: var(--pure-black); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">AI & Robotics</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">An AI and robotics startup expanding in the UAE (HQ Dubai) scaled key talent hiring</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -795,7 +925,7 @@
                             <a href="#cs-me-3" data-modal="cs-me-3" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Hiring-Efficiency.webp" alt="Retailer Hiring" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">Hiring Efficiency</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A leading regional retailer improved hiring turnaround time with interview-as-a-service (IaaS) support (Sharaf DG)</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -817,8 +947,8 @@
                             <a href="#cs-koch" data-modal="cs-koch" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/GCC-Setup.webp" alt="Koch GCC" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">GCC Setup</span>
-                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-headquartered conglomerate set up their Global Capability Center in India (masked case study of Koch Industries)</p>
+                                  
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-headquartered conglomerate set up their Global Capability Center in India </p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
                             </a>
@@ -827,8 +957,8 @@
                             <a href="#cs-microsoft" data-modal="cs-microsoft" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/TA-Operations.webp" alt="Microsoft TA" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">TA Operations</span>
-                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-based global tech leader streamlined its TA operations (masked case study of Microsoft)</p>
+                                   
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A US-based global tech leader streamlined its TA operations </p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
                             </a>
@@ -837,7 +967,7 @@
                             <a href="#cs-moe" data-modal="cs-moe" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Assessments.webp" alt="MoE Indonesia" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--action-yellow); color: var(--pure-black); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">Assessment Operations</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">The MoE, Indonesia, secured national-scale teacher assessments with Pearson integration</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -859,7 +989,7 @@
                             <a href="#cs-debt" data-modal="cs-debt" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Fin-Tech.webp" alt="Debt Lifecycle" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">Fintech Hiring</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">The world’s only end-to-end debt lifecycle platform scaled tech hiring across key Indian metros</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -869,7 +999,7 @@
                             <a href="#cs-elearning" data-modal="cs-elearning" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Ed-Tech.webp" alt="E-learning Tech" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--action-yellow); color: var(--pure-black); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">EdTech Hiring</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A tech-first e-learning company drove high-impact tech hiring</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -877,10 +1007,10 @@
                         </div>
                         <div class="swiper-slide">
                             <a href="#cs-sports" data-modal="cs-sports" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
-                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Tech-Assembly-copy.webp" alt="Sports Tech" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
+                                <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Global-leader-in-sports-and-entertainment-tech.webp" alt="Sports Tech" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--dark-blue); color: white; padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">Tech Assembly</span>
-                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A global leader in sports and entertainment tech built a high-calibre engineering team</p>
+
+                                    <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">A global leader in sports and entertainment tech built a high-caliber engineering team</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
                             </a>
@@ -889,7 +1019,7 @@
                             <a href="#cs-fashion" data-modal="cs-fashion" class="card card-alt popup-trigger text-decoration-none" style="padding: 0; color: inherit;">
                                 <img src="https://testing.careernet.ae/wp-content/uploads/2026/05/Tech-Hiring.webp" alt="Fashion Ecom" class="img-fluid" style="height: 200px; border-radius: 16px 16px 0 0; object-fit: cover;">
                                 <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
-                                    <span style="background: var(--action-yellow); color: var(--pure-black); padding: 6px 16px; border-radius: 30px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: inline-block; align-self: flex-start;">E-Commerce</span>
+
                                     <p style="font-weight: 700; font-size: 18px; margin-bottom: 20px; color: var(--pure-black); flex-grow: 1;">India’s leading fashion e-commerce company scaled tech hiring across multiple functions and seniority levels</p>
                                     <span class="read-more-text">Read More</span>
                                 </div>
@@ -907,14 +1037,14 @@
             <h2 class="gradient-text mb-5">What our customers say</h2>
             <div class="swiper init-swiper testimonial-swiper">
                 <script type="application/json" class="swiper-config">
-                    { "loop": true, "speed": 1000, "autoplay": { "delay": 5000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 5000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 2, "spaceBetween": 30 } } }
                 </script>
                 <div class="swiper-wrapper align-items-stretch">
                     <div class="swiper-slide">
                         <div class="card mx-auto h-100" style="padding: 40px; border-radius: 20px; background: var(--premium-gradient); border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
                             <i class="bi bi-quote fs-1 text-warning opacity-75 mb-3 d-block"></i>
                             <p class="fs-6 fst-italic mb-4 flex-grow-1 text-white">"Careernet has been instrumental in scaling our regional teams. Their deep understanding of the Middle East market and efficient RPO models have significantly reduced our time-to-hire while maintaining high candidate quality."</p>
-                            <h5 class="mb-0 text-warning">Goyan Group</h5>
+                            <h5 class="mb-0 text-warning">Royal Group</h5>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -924,13 +1054,7 @@
                             <h5 class="mb-0 text-warning">Infovision Information</h5>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card mx-auto h-100" style="padding: 40px; border-radius: 20px; background: var(--premium-gradient); border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-                            <i class="bi bi-quote fs-1 text-warning opacity-75 mb-3 d-block"></i>
-                            <p class="fs-6 fst-italic mb-4 flex-grow-1 text-white">"Exceptional support during our recent expansion phase. The team provided highly vetted candidates and optimized our entire talent acquisition pipeline across multiple regions with speed."</p>
-                            <h5 class="mb-0 text-warning">Leading Tech Innovator</h5>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -942,8 +1066,8 @@
             <div class="grid grid-2 mb-5" style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
                 <div style="background: var(--premium-gradient); padding: 50px 40px; color: white; display: flex; flex-direction: column; justify-content: center;" data-aos="fade-in" data-aos-delay="200">
                     <h2 style="color: white; margin-bottom: 20px; text-align: left;">Let’s make it happen in the Middle East</h2>
-                    <p style="font-size: 18px; opacity: 0.9; margin-bottom: 40px;">Partner with us to scale your capabilities with world-class talent. Leave your details and our experts will reach out to you.</p>
-                    
+                    <!-- <p style="font-size: 18px; opacity: 0.9; margin-bottom: 40px;">Partner with us to scale your capabilities with world-class talent. Leave your details and our experts will reach out to you.</p>
+                     -->
                     <div style="background: rgba(255,255,255,0.1); border-left: 4px solid var(--action-yellow); padding: 20px; border-radius: 0 10px 10px 0;">
                         <h4 style="color: white; font-size: 16px; margin-bottom: 10px;">Careernet Middle East Consulting L.L.C-FZ</h4>
                         <p style="font-size: 14px; opacity: 0.9; margin: 0 0 5px;"><i class="bi bi-envelope text-warning me-2"></i> <a href="mailto:sales@careernet.ae" class="contact-link text-white">sales@careernet.ae</a></p>
@@ -1157,18 +1281,283 @@
             </div>
         </div>
 
-        <div class="modal-overlay" id="cs-me-1"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Newgen</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Content coming soon...</li></ul><h4>Our solutions</h4><ul><li>Content coming soon...</li></ul><h4>The impact</h4><ul><li>Content coming soon...</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-me-2"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: AI Startup UAE</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Content coming soon...</li></ul><h4>Our solutions</h4><ul><li>Content coming soon...</li></ul><h4>The impact</h4><ul><li>Content coming soon...</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-me-3"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Sharaf DG</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Content coming soon...</li></ul><h4>Our solutions</h4><ul><li>Content coming soon...</li></ul><h4>The impact</h4><ul><li>Content coming soon...</li></ul></div></div></div>
-        
-        <div class="modal-overlay" id="cs-koch"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: US-headquartered conglomerate</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Establish a global tech centre in Bangalore</li><li>Build brand awareness among tech talent</li><li>Enable flexible, high-volume hiring</li><li>Compete with established competitors for top talent</li></ul><h4>Our solutions</h4><ul><li>Consultative talent mapping, sourcing, and screening</li><li>Hiring process design, including frameworks</li><li>Employer branding campaigns</li><li>SLA- and KPI-led governance</li></ul><h4>The impact</h4><ul><li>India center established within a year</li><li>Team scaled from 2 to 900</li><li>Strong talent pipeline and employer brand built</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-microsoft"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Globally leading US tech MNC</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Scale hiring to 8,000 annually</li><li>Single-partner TA outsourcing</li><li>Consistent, high-quality interviews</li><li>Improve efficiency at pan-India scale</li></ul><h4>Our solutions</h4><ul><li>End-to-end TA management</li><li>On-ground + centralized teams</li><li>Scaled interview coordination</li><li>Candidate logistics</li></ul><h4>The impact</h4><ul><li>60,000+ interviews → 8,000+ offers</li><li>12–15% YoY hiring growth</li><li>20–25% higher processing capacity</li><li>Centralized hiring data and insights</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-moe"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: MoE, Indonesia</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Fraud-proof assessments at national scale</li><li>Secure evaluation of 180,000 candidates</li><li>Fully remote, low-friction access</li><li>Faster, audit-ready execution</li></ul><h4>Our solutions</h4><ul><li>AI-based identity verification and monitoring</li><li>Integration with Pearson’s Versant</li><li>Rapid deployment with minimal setup</li><li>Real-time reporting and 24×7 support</li></ul><h4>The impact</h4><ul><li>20,000+ assessed in 6 months</li><li>90%+ faster cycles</li><li>90%+ cost efficiency vs in-person</li><li>Scalable foundation for 180,000 by 2027</li></ul></div></div></div>
+        <div class="modal-overlay" id="cs-me-1">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Newgen</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Expand operations efficiently into the Middle East market</li>
+                        <li>Source and evaluate niche technology skill sets locally</li>
+                        <li>Overcome strong competition for top-tier digital talent</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Deployed specialized local recruitment experts</li>
+                        <li>Created targeted sourcing strategies for niche IT roles</li>
+                        <li>Streamlined multi-stage assessment protocols</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>Successfully established a high-performing tech team in Saudi Arabia</li>
+                        <li>Reduced overall time-to-fill by 35%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <div class="modal-overlay" id="cs-debt"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: End-to-end debt lifecycle platform</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Hire 100 tech professionals in 6 months (Bengaluru, Chennai)</li><li>Source across consumer internet, enterprise tech, startups</li><li>Roles: Backend, Frontend, QA, Data Science (SE to EM)</li><li>High demand, low conversions, poor join rates</li></ul><h4>Our solutions</h4><ul><li>RPO model with onsite + backend recruiters</li><li>Calibrated requirements with hiring managers</li><li>Weekend drives, weekly reviews, candidate–manager connects</li></ul><h4>The impact</h4><ul><li>110 offers, 45 onboardings in 7–8 months</li><li>Stronger hiring structure, high client satisfaction</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-elearning"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Tech-first e-learning company</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Build a 50-member tech team (no TA team)</li><li>Source from consumer internet, deep tech, startups</li><li>Roles across engineering, data, product, and program</li><li>High demand, low brand awareness, underperforming RPO</li></ul><h4>Our solutions</h4><ul><li>6-month RPO partnership</li><li>On-site lead, account manager, and sourcing team</li><li>Salary benchmarking and level mapping</li><li>Weekend drives, weekly reviews, candidate–manager connects</li></ul><h4>The impact</h4><ul><li>40 offers, 23 onboardings in 7–8 months</li><li>Recruitment process set up, strong client satisfaction</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-sports"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Global leader in sports and entertainment tech</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Build a high-potential tech team in Mumbai</li><li>Limited local tech talent</li><li>Interview constraints across time zones</li></ul><h4>Our solutions</h4><ul><li>Targeted sourcing from product companies</li><li>Focus on Mumbai-based candidates</li><li>Flexible interview scheduling</li><li>Candidate–manager engagement to boost conversions</li></ul><h4>The impact</h4><ul><li>~30 engineers hired within timelines</li><li>60%+ joining ratio</li></ul></div></div></div>
-        <div class="modal-overlay" id="cs-fashion"><div class="modal-box"><button class="modal-close">×</button><h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Leading fashion e-commerce company</h3><div class="cs-section"><h4>The challenge</h4><ul><li>Fill 80–100 roles in 6–7 months</li><li>Hire top talent from e-commerce and scaled startups</li><li>Roles across engineering, data, and DevOps (SE to Architect)</li><li>Process delays, no onsite TA support</li></ul><h4>Our solutions</h4><ul><li>RPO model with onsite + backend team</li><li>Dedicated recruiter pod</li><li>Stakeholder coordination and process gap closure</li><li>Tech network sourcing, weekend drives, post-offer engagement</li></ul><h4>The impact</h4><ul><li>105 offers with 70 onboardings in 7–8 months</li><li>70% reduction in time-to-hire</li><li>All roles closed, targets exceeded</li></ul></div></div></div>
+        <div class="modal-overlay" id="cs-me-2">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: AI Startup UAE</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Rapidly build a specialized AI & Robotics talent pool</li>
+                        <li>Create strong employer brand awareness in a new region</li>
+                        <li>Maintain strict quality controls for high-stakes roles</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Executed targeted talent mapping and competitive landscaping</li>
+                        <li>Implemented an agile, dedicated RPO delivery team</li>
+                        <li>Enhanced candidate engagement through tailored campaigns</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>Successfully scaled engineering teams ahead of schedule</li>
+                        <li>Achieved high candidate retention and satisfaction rates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-me-3">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Sharaf DG</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Handle high-volume retail hiring without compromising quality</li>
+                        <li>Reduce the administrative burden on internal hiring managers</li>
+                        <li>Standardize candidate screening processes</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Integrated our seamless Interview-as-a-Service (IaaS) offering</li>
+                        <li>Deployed structured, automated initial screening rounds</li>
+                        <li>Provided real-time analytics and candidate progress tracking</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>Significantly improved overall hiring turnaround time</li>
+                        <li>Freed up core business leaders to focus on strategic growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay" id="cs-koch">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: US-headquartered conglomerate</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Establish a global tech centre in Bangalore</li>
+                        <li>Build brand awareness among tech talent</li>
+                        <li>Enable flexible, high-volume hiring</li>
+                        <li>Compete with established competitors for top talent</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Consultative talent mapping, sourcing, and screening</li>
+                        <li>Hiring process design, including frameworks</li>
+                        <li>Employer branding campaigns</li>
+                        <li>SLA- and KPI-led governance</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>India center established within a year</li>
+                        <li>Team scaled from 2 to 900</li>
+                        <li>Strong talent pipeline and employer brand built</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-microsoft">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Globally leading US tech MNC</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Scale hiring to 8,000 annually</li>
+                        <li>Single-partner TA outsourcing</li>
+                        <li>Consistent, high-quality interviews</li>
+                        <li>Improve efficiency at pan-India scale</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>End-to-end TA management</li>
+                        <li>On-ground + centralized teams</li>
+                        <li>Scaled interview coordination</li>
+                        <li>Candidate logistics</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>60,000+ interviews → 8,000+ offers</li>
+                        <li>12–15% YoY hiring growth</li>
+                        <li>20–25% higher processing capacity</li>
+                        <li>Centralized hiring data and insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-moe">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: MoE, Indonesia</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Fraud-proof assessments at national scale</li>
+                        <li>Secure evaluation of 180,000 candidates</li>
+                        <li>Fully remote, low-friction access</li>
+                        <li>Faster, audit-ready execution</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>AI-based identity verification and monitoring</li>
+                        <li>Integration with Pearson’s Versant</li>
+                        <li>Rapid deployment with minimal setup</li>
+                        <li>Real-time reporting and 24×7 support</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>20,000+ assessed in 6 months</li>
+                        <li>90%+ faster cycles</li>
+                        <li>90%+ cost efficiency vs in-person</li>
+                        <li>Scalable foundation for 180,000 by 2027</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-debt">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: End-to-end debt lifecycle platform</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Hire 100 tech professionals in 6 months (Bengaluru, Chennai)</li>
+                        <li>Source across consumer internet, enterprise tech, startups</li>
+                        <li>Roles: Backend, Frontend, QA, Data Science (SE to EM)</li>
+                        <li>High demand, low conversions, poor join rates</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>RPO model with onsite + backend recruiters</li>
+                        <li>Calibrated requirements with hiring managers</li>
+                        <li>Weekend drives, weekly reviews, candidate–manager connects</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>110 offers, 45 onboardings in 7–8 months</li>
+                        <li>Stronger hiring structure, high client satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-elearning">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Tech-first e-learning company</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Build a 50-member tech team (no TA team)</li>
+                        <li>Source from consumer internet, deep tech, startups</li>
+                        <li>Roles across engineering, data, product, and program</li>
+                        <li>High demand, low brand awareness, underperforming RPO</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>6-month RPO partnership</li>
+                        <li>On-site lead, account manager, and sourcing team</li>
+                        <li>Salary benchmarking and level mapping</li>
+                        <li>Weekend drives, weekly reviews, candidate–manager connects</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>40 offers, 23 onboardings in 7–8 months</li>
+                        <li>Recruitment process set up, strong client satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-sports">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Global leader in sports and entertainment tech</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Build a high-potential tech team in Mumbai</li>
+                        <li>Limited local tech talent</li>
+                        <li>Interview constraints across time zones</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>Targeted sourcing from product companies</li>
+                        <li>Focus on Mumbai-based candidates</li>
+                        <li>Flexible interview scheduling</li>
+                        <li>Candidate–manager engagement to boost conversions</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>~30 engineers hired within timelines</li>
+                        <li>60%+ joining ratio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="cs-fashion">
+            <div class="modal-box">
+                <button class="modal-close">×</button>
+                <h3 class="gradient-text" style="text-align: center; display: block; margin-bottom: 20px; font-size: 24px;">Case Study: Leading fashion e-commerce company</h3>
+                <div class="cs-section">
+                    <h4>The challenge</h4>
+                    <ul>
+                        <li>Fill 80–100 roles in 6–7 months</li>
+                        <li>Hire top talent from e-commerce and scaled startups</li>
+                        <li>Roles across engineering, data, and DevOps (SE to Architect)</li>
+                        <li>Process delays, no onsite TA support</li>
+                    </ul>
+                    <h4>Our solutions</h4>
+                    <ul>
+                        <li>RPO model with onsite + backend team</li>
+                        <li>Dedicated recruiter pod</li>
+                        <li>Stakeholder coordination and process gap closure</li>
+                        <li>Tech network sourcing, weekend drives, post-offer engagement</li>
+                    </ul>
+                    <h4>The impact</h4>
+                    <ul>
+                        <li>105 offers with 70 onboardings in 7–8 months</li>
+                        <li>70% reduction in time-to-hire</li>
+                        <li>All roles closed, targets exceeded</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="modal-overlay" id="modal-cookie-settings">
             <div class="modal-box">
@@ -1233,9 +1622,9 @@
         <a href="https://wa.me/97148369591" class="tool-float whatsapp-float" id="whatsappIcon" target="_blank" aria-label="WhatsApp">
             <i class="bi bi-whatsapp"></i>
         </a>
-        <button class="tool-float chatbot-float" id="chatbotIcon" aria-label="Chatbot">
-            <i class="bi bi-chat-dots-fill"></i>
-        </button>
+        <!-- <button class="tool-float chatbot-float" id="chatbotIcon" aria-label="Chatbot">
+            <i class="bi bi-robot"></i>
+        </button> -->
     </div>
 
     <div class="chat-window" id="chatbotWindow">
