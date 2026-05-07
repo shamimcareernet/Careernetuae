@@ -296,13 +296,13 @@
         .read-more-text { display: inline-flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 700; color: var(--primary-blue); transition: var(--transition); }
         .card:hover .read-more-text { color: var(--action-yellow); }
 
-        .expertise-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 25px; display: flex; align-items: center; gap: 20px; transition: var(--transition); text-align: left; position: relative; overflow: hidden; }
+        .expertise-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; display: flex; align-items: center; gap: 20px; transition: var(--transition); text-align: left; position: relative; overflow: hidden; }
         .expertise-card .icon-box { width: 50px; height: 50px; flex-shrink: 0; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--white); }
         .expertise-card h4 { font-size: 15px; margin-bottom: 0; line-height: 1.4; color: var(--white); }
 
         @media (max-width: 767px) {
             .expertise-card { padding: 15px !important; }
-            #expertise .grid-4 { margin-top: 20px !important; }
+            #expertise .grid-3 { margin-top: 20px !important; }
         }
 
         .glass-card { background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.6); border-radius: 10px; padding: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: left; height: 100%; transition: var(--transition); overflow: hidden; display: flex; flex-direction: column; }
@@ -600,8 +600,15 @@
                     </h2>
                     <div style="font-size: 18px;">
                         <p>Since 1999, Careernet has been the leading talent solutions provider for Fortune 500 enterprises and high-growth technology companies across global markets.</p>
-                        <p>What we bring: Expertise spanning industries, functions, and experience levels — from Technology and Engineering to Infrastructure, Oil and Gas, and Retail. Full-lifecycle talent solutions including Permanent hiring, Staffing, Leadership search, Emiratization, Talent branding, and Assessment-led hiring.</p>
-                        <p>With a strong global reach combined with a deep understanding of local markets, and a growing Middle East presence with Dubai on-ground and global delivery centers.</p>
+                        
+                        <h4 style="margin-top: 20px; margin-bottom: 15px;">What we bring</h4>
+                        <ul style="padding-left: 20px; margin-bottom: 15px;">
+                            <li style="margin-bottom: 10px;">Expertise spanning industries, functions, and experience levels — from AI, robotics, and emerging tech startups to retail, e-commerce, hospitality, and beyond</li>
+                            <li style="margin-bottom: 10px;">Full-lifecycle recruitment solutions: Permanent hiring, Staffing, Leadership search as an executive search company, Nationalization, Talent branding, Assessment-led hiring</li>
+                            <li style="margin-bottom: 10px;">Strong global reach combined with a deep understanding of local markets</li>
+                            <li style="margin-bottom: 10px;">A growing Middle East presence, with Dubai on-ground and global delivery centers</li>
+                        </ul>
+                        
                         <p>Because the world needs great talent, we make it happen with the unified strength of Careernet, HirePro, Longhouse, and MyCareernet.</p>
                     </div>
                 </div>
@@ -857,36 +864,48 @@
              -->
             <div class="grid grid-4" style="margin-top: 40px;" data-aos="fade-in" data-aos-delay="200">
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-cart3"></i></div>
-                    <h4>Retail and E-commerce</h4>
-                </div>
-                <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-laptop"></i></div>
-                    <h4>Tech, Product, and Digital</h4>
+                    <h4>Technology and Digital</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-cpu"></i></div>
                     <h4>AI, Robotics, Emerging Tech Startups</h4>
                 </div>
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-fuel-pump"></i></div>
-                    <h4>Oil and Gas</h4>
+                    <div class="icon-box"><i class="bi bi-bank"></i></div>
+                    <h4>Banking and Financial Services</h4>
                 </div>
                 <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-headset"></i></div>
-                    <h4>Shared Services</h4>
-                </div>
-                <div class="expertise-card">
-                    <div class="icon-box"><i class="bi bi-buildings"></i></div>
-                    <h4>Infrastructure</h4>
+                    <div class="icon-box"><i class="bi bi-cart3"></i></div>
+                    <h4>Retail and E-Commerce</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-cup-hot"></i></div>
-                    <h4>Hospitality</h4>
+                    <h4>Hospitality and Tourism</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-buildings"></i></div>
+                    <h4>Real Estate and Construction</h4>
                 </div>
                 <div class="expertise-card">
                     <div class="icon-box"><i class="bi bi-heart-pulse"></i></div>
                     <h4>Healthcare and Pharma</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-fuel-pump"></i></div>
+                    <h4>Energy and Oil/Gas</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-truck"></i></div>
+                    <h4>Logistics and Ports</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-film"></i></div>
+                    <h4>Entertainment and Media</h4>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon-box"><i class="bi bi-book"></i></div>
+                    <h4>Education</h4>
                 </div>
             </div>
         </div>
@@ -894,7 +913,7 @@
 
     <div class="marquee-wrap">
         <div class="text-center mb-30" data-aos="fade-in">
-            <h2 class="gradient-text" style="font-size: clamp(24px, 3vw, 36px);">Trusted by leading organizations globally</h2>
+            <h2 class="gradient-text" style="font-size: 28px;">Trusted by leading organizations globally</h2>
          
         </div>
         <div class="marquee" data-aos="fade-in">
@@ -1097,7 +1116,7 @@
             <h2 class="gradient-text mb-5">What our customers say</h2>
             <div class="swiper init-swiper testimonial-swiper">
                 <script type="application/json" class="swiper-config">
-                    { "loop": true, "speed": 1000, "autoplay": { "delay": 5000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 3, "spaceBetween": 30 } } }
+                    { "loop": true, "speed": 1000, "autoplay": { "delay": 5000, "disableOnInteraction": false }, "slidesPerView": 1, "spaceBetween": 30, "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }, "breakpoints": { "768": { "slidesPerView": 2, "spaceBetween": 30 }, "1024": { "slidesPerView": 2, "spaceBetween": 30 } } }
                 </script>
                 <div class="swiper-wrapper align-items-stretch">
                     <div class="swiper-slide">
