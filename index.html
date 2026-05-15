@@ -153,7 +153,7 @@
            ========================================================================== */
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 30px; border: none; border-radius: 30px; font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; transition: var(--transition); width: 100%; text-decoration: none; }
         @media (min-width: 768px) { .btn { width: auto; } }
-        @media (max-width: 767px) { .mobile-cta-reduce { width: max-content !important; margin: 0 auto; display: inline-block; } }
+        @media (max-width: 767px) { .mobile-cta-reduce { width: max-content !important; margin: 0; display: inline-block; } }
         
         .btn-primary { background: var(--primary-blue); color: var(--white); border: 2px solid var(--primary-blue); }
         .btn-primary:hover { background: transparent; color: var(--primary-blue); transform: translateY(-3px); }
@@ -322,8 +322,8 @@
 
         /* Custom Bullet List */
         .gradient-bullet-list { list-style: none; padding: 0; }
-        .gradient-bullet-list li { position: relative; padding-left: 25px; margin-bottom: 12px; }
-        .gradient-bullet-list li::before { content: ''; position: absolute; left: 0; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--premium-gradient); }
+        .gradient-bullet-list li { display: flex; align-items: flex-start; margin-bottom: 16px; font-size: 16px; color: var(--pure-black); line-height: 1.5;}
+        .gradient-bullet-list li::before { content: ''; flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--premium-gradient); margin-right: 15px; margin-top: 7px; }
 
     </style>
 </head>
@@ -372,7 +372,7 @@
         
         <div class="container hero-container" style="position: relative; z-index: 2;">
             <div class="grid grid-2" style="height: 100%; width: 100%;">
-                <div data-aos="fade-in" class="hero-content">
+                <div class="hero-content">
                     <h1 style="color: var(--white); text-align: left;">Making holistic talent solutions happen in the Middle East</h1>
                     <p style="font-size: 20px; opacity: 0.9; margin-bottom: 0; max-width: 500px; font-weight: 400; text-align: left; color: var(--white);">Helping global organizations optimize the sourcing, assessing, and hiring of early-career to CXO talent for 25+ years</p>
                     
@@ -381,7 +381,7 @@
                         <a href="#modal-cv" class="btn btn-outline popup-trigger" style="width: auto;">Submit Your CV</a>
                     </div>
                 </div>
-                <div class="hero-img-container" data-aos="fade-in" data-aos-delay="200">
+                <div class="hero-img-container">
                     <img src="https://testing.careernet.ae/wp-content/uploads/2026/04/banner-img-2.png" alt="Great Talent Platform" class="img-fluid hero-img">
                 </div>
             </div>
@@ -872,11 +872,11 @@
     </section>
 
     <section id="contact" class="section section-gradient" style="position: relative; overflow: hidden; padding-bottom: 0;">
-        <div class="container" data-aos="fade-in" style="max-width: 800px;">
+        <div class="container" data-aos="fade-in" style="max-width: 1000px;">
             <div class="text-center mb-4">
                 <h2 style="color: white;">Connect with us</h2>
             </div>
-            <div style="background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); padding: 50px 40px; margin-bottom: 50px;">
+            <div style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); padding: 50px 40px; margin-bottom: 50px;">
                 <div class="contact-tabs-container">
                     <button class="contact-tab-btn active" data-target="contact-corporate">Corporates</button>
                     <button class="contact-tab-btn" data-target="contact-candidate">Candidates</button>
@@ -1006,13 +1006,14 @@
                 <form action="process_form.php" method="POST" class="ajax-form" id="hireForm">
                     <input type="hidden" name="form_type" value="hire">
                     <div class="grid grid-2" style="gap: 15px;">
-                        <input type="text" name="First_Name" class="form-control" placeholder="First Name*" required style="margin-bottom: 0;">
-                        <input type="text" name="Last_Name" class="form-control" placeholder="Last Name*" required style="margin-bottom: 0;">
+                        <input type="text" name="Name" class="form-control" placeholder="Name" required style="margin-bottom: 0;">
+                        <input type="tel" name="Phone" class="form-control" placeholder="Phone Number" required style="margin-bottom: 0;">
                     </div>
-                    <input type="text" name="Company_Name" class="form-control" placeholder="Company Name*" required style="margin-top: 15px;">
-                    <input type="email" name="Email" class="form-control" placeholder="Work Email ID*" required>
-                    <input type="tel" name="Phone" class="form-control" placeholder="Contact Number*" required>
-                    <textarea name="Requirements" class="form-control" placeholder="Tell us about your hiring requirements..." rows="4" style="resize: none;"></textarea>
+                    <div class="grid grid-2" style="gap: 15px; margin-top: 15px;">
+                        <input type="email" name="Email" class="form-control" placeholder="Email" required style="margin-bottom: 0;">
+                        <input type="text" name="Company_Name" class="form-control" placeholder="Company Name" required style="margin-bottom: 0;">
+                    </div>
+                    <textarea name="Message" class="form-control" placeholder="Message" rows="4" style="resize: none; margin-top: 15px;"></textarea>
                     
                     <div style="text-align: center; margin-top: 10px;">
                         <button type="submit" class="btn btn-secondary btn-animate" style="width: auto; padding: 14px 40px;">Submit Inquiry</button>
